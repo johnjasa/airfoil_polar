@@ -70,4 +70,4 @@ def create_ham2d_input_files(dir_name, af_files, re=[3e6,6e6,9e6,12e6], aoa=np.l
                 os.symlink('../mesh/meshgen_test/autorun/QuadData', alpha_dir+'/QuadData')
 
 if __name__=="__main__":
-    create_ham2d_input_files('iea15mw',glob.glob('coordinates/*'))
+    create_ham2d_input_files('bar',glob.glob('coordinates/*'))

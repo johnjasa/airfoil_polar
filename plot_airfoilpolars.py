@@ -34,4 +34,4 @@ def plot_all_airfoil_polar(af_polar_yaml, filename):
             plt.close(fig)
 
 if __name__=="__main__":
-  plot_all_airfoil_polar('iea15mw/ham2d/re03000000.yaml','iea15mw/ham2d/re03000000.pdf')
+  plot_all_airfoil_polar('bar/ham2d/re03000000.yaml','bar/ham2d/re03000000.pdf')
