@@ -91,10 +91,11 @@ def submit_mesh_job(dir_name, af_names, account, re=[3e6,6e6,9e6,12e6], n_cases_
   with open(dir_name+"/ham2d/job_list/mesh_cases.slurm",'w') as f:
     f.write("#!/bin/bash"+"\n")
     f.write("#SBATCH --nodes=1"+"\n")
-    f.write("#SBATCH --time=4:00:00"+"\n")
+    f.write("#SBATCH --time=1:00:00"+"\n")
     f.write("#SBATCH --account={}".format(account)+"\n")
     f.write("#SBATCH --job-name={}_mesh".format(dir_name)+"\n")
     f.write("#SBATCH --output=out.%x_%j"+"\n")
+    f.write("#SBATCH --partition=debug"+"\n")
     f.write(""+"\n")
     f.write("source /projects/integrate/integrate_cfd/integrate_env.sh"+"\n")
     f.write(""+"\n")

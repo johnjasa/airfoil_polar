@@ -34,4 +34,4 @@ def create_ham2d_polar(dir_name, af_names, reynolds, aoa=np.linspace(-4,20,25)):
 
 if __name__=="__main__":
     afs = [i.split('/')[-1] for i in glob.glob('coordinates/*') ]
-    process_ham2d_results('bar', afs)
+    process_ham2d_results('bar', afs, re=[3e6], aoa=np.linspace(4, 6, 2))
