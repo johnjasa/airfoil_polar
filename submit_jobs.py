@@ -125,4 +125,4 @@ def submit_mesh_job(dir_name, af_names, account, re=[3e6,6e6,9e6,12e6], n_cases_
 
 if __name__=="__main__":
   afs = [i.split('/')[-1] for i in glob.glob('coordinates/*') ]
-  submit_ham2d_jobs('bar', afs, 'bar')
+  submit_ham2d_jobs('bar', afs, 'bar', re=[3e6], aoa=np.linspace(4, 6, 2))
