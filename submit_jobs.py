@@ -3,7 +3,7 @@ import glob, pprint, pathlib, os
 import numpy as np
 import pandas as pd
 
-def submit_ham2d_jobs(dir_name, af_names, account, re=[3e6,6e6,9e6,12e6], aoa=np.linspace(-4,20,25), n_cases_per_job=36):
+def submit_ham2d_jobs(dir_name, af_names, account, re=[3e6,6e6,9e6,12e6], aoa=np.linspace(-10, 20, 31), n_cases_per_job=36):
 
   #Submit mesh job first
   mesh_job_id = submit_mesh_job(dir_name, af_names, account, re, n_cases_per_job)
